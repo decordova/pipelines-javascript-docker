@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: decordovapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: decordovapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: decordovapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: decordovapipelinesjavascriptdocker 
+          image: pro690a2containerregistry.azurecr.io/decordovapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
